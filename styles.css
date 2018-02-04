@@ -99,7 +99,7 @@ body {
 
 .small-item, .large-item {
     background-color: dimgrey;
-    padding: 0.2em 1em;
+    padding: 0.2em 1em 1em 1em;
     box-shadow: .2em .2em 1em rgb(57, 94, 95);
 }
 
