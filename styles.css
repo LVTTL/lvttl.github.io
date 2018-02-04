@@ -1,0 +1,116 @@
+body {
+    background-color: #383E42;
+    padding: 1em;
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 'header'
+                         'title'
+                         'content'
+                         'footer';
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1040px;
+
+    color: azure;
+    background-color: cadetblue;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.2em;
+    box-shadow: 5px 5px 10px rgb(37, 41, 44);
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    color: azure;
+}
+
+.content {
+    
+    grid-area: content;
+    padding: 1em;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-flow: column;
+    grid-gap: 1em;
+}
+
+.footer {
+    display: flex;
+    background-color: dimgrey;
+    grid-area: footer;
+    padding: 0.5em;
+}
+
+.title {
+    grid-area: title;
+    background-color: dimgrey;
+    font-size: 2em;
+    text-align: center;
+    font-stretch: ultra-expanded;
+    margin: 0 0.5em;
+    box-shadow: .1em .1em 0.5em rgb(57, 94, 95);
+}
+
+.footer-label {
+    padding: .2em;
+    border-radius: .2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.footer-label:link {
+    color: azure;
+    text-decoration: none;
+}
+
+.footer-label:visited {
+    color: azure;
+    text-decoration: none;
+}
+
+.footer-label:hover {
+    background-color: cadetblue;
+    transition-duration: 0.2s;
+}
+
+.picframe {
+    display: inline-block;
+    background-color: azure;
+    padding: .2em;
+    border-radius: .2em;
+    box-shadow: .2em .2em 1em rgb(57, 94, 95);
+}
+
+.large-item {
+    grid-column-end:  span 2;
+    grid-row-end: span 2;
+}
+
+.small-item {
+    grid-column: auto / span 1;
+    grid-row: auto / span 1;
+}
+
+.small-item, .large-item {
+    background-color: dimgrey;
+    padding: 0.2em 1em;
+    box-shadow: .2em .2em 1em rgb(57, 94, 95);
+}
+
+/* @media screen and (min-width: 1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1040px 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: 'lspace header rspace'
+                             'lspace title rspace'
+                             'lspace content rspace'
+                             'lspace footer rspace';
+    }
+} */
