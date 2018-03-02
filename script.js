@@ -19,8 +19,20 @@ function getRepos() {
             child.appendChild(title);
             container.appendChild(child);
         });
+        repos.forEach (repo => {
+            getReadme(repo);
+        })
     });
 }
+
+function getReadme(repo) {
+    fetch("https://api.github.com/repos/lvttl/"+repo.name+"/contents/README.md").then(response => {
+        return response.json()
+    }).then(result => console.log(window.atob(result.content)));
+}
+
+// get README.md
+
 
 
 window.addEventListener("load", evt => {
