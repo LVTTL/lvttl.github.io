@@ -13,7 +13,10 @@ function getRepos() {
         repos.forEach(repo => {
             let child = document.createElement("div");
             child.className = "small-item";
-            child.innerText = repo.name;
+            // child.innerText = repo.name;
+            let title = document.createElement("h4");
+            title.innerText = repo.name;
+            child.appendChild(title);
             container.appendChild(child);
         });
     });
